@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PJOK Edu — Belajar Aktif dan Sehat</title>
+<style>
+:root{--navy:#17324d;--blue:#2878b8;--sky:#eaf5ff;--green:#2e9d72;--yellow:#ffd166;--ink:#203247;--muted:#64748b;--paper:#f5f8fc;--white:#fff;--line:#e4ebf2;--shadow:0 12px 30px rgba(24,54,82,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(120deg,#17324d,#2878b8);color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;gap:16px;position:sticky;top:0;z-index:5;box-shadow:0 4px 18px #17324d22}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px}.logo{width:42px;height:42px;border-radius:14px;background:#ffffff22;display:grid;place-items:center;font-size:24px}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:#eaf5ff;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;font-size:13px}nav a:hover,nav a:focus{background:#ffffff25}
+main{max-width:1180px;margin:28px auto;padding:0 20px}.hero{background:linear-gradient(115deg,#dff2ff,#effbf5);border-radius:24px;padding:34px;display:grid;grid-template-columns:1.5fr .8fr;gap:20px;align-items:center;overflow:hidden}
+.eyebrow{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}.hero h1{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:8px 0 12px;color:var(--navy)}.hero p{color:#496174;max-width:650px;margin:0 0 20px}.hero-art{font-size:clamp(80px,12vw,140px);text-align:center;filter:drop-shadow(0 12px 10px #17324d18)}
+.btn{display:inline-block;border:0;border-radius:12px;padding:11px 16px;background:var(--blue);color:white;text-decoration:none;font-weight:750;cursor:pointer}.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line)}.btn.green{background:var(--green)}
+section{margin:34px 0;scroll-margin-top:100px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px}.section-head h2{margin:0;color:var(--navy);font-size:24px}.section-head p{margin:4px 0 0;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.stat,.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.stat{display:flex;align-items:center;gap:14px}.stat-icon{width:48px;height:48px;border-radius:14px;background:var(--sky);display:grid;place-items:center;font-size:23px}.stat strong{display:block;font-size:23px;color:var(--navy);line-height:1.2}.stat small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{padding:0;overflow:hidden}.card-top{padding:20px;background:linear-gradient(120deg,#eaf5ff,#f0fbf5);display:flex;justify-content:space-between;align-items:center}.card-top .emoji{font-size:40px}.tag{display:inline-block;background:#e8f5ef;color:#217652;border-radius:99px;padding:4px 10px;font-size:12px;font-weight:800}.card-body{padding:20px}.card h3{margin:8px 0;color:var(--navy);font-size:20px}.card p{color:#5b6b7b;margin:8px 0 14px}.video{position:relative;padding-top:56.25%;background:#10283d}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.note{background:#fff8e7;border-left:4px solid var(--yellow);padding:12px 14px;border-radius:8px;color:#72551a;font-size:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h3{margin:0 0 12px;color:var(--navy)}label{display:block;font-weight:700;margin:12px 0 6px}input,textarea,select{width:100%;padding:12px;border:1px solid #ccd8e4;border-radius:10px;font:inherit;background:white;color:var(--ink)}textarea{min-height:105px;resize:vertical}input:focus,textarea:focus,select:focus{outline:3px solid #2878b822;border-color:var(--blue)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.list{display:grid;gap:12px}.item{padding:13px;border:1px solid var(--line);border-radius:12px;background:#fbfdff}.item strong{color:var(--navy)}.item small{display:block;color:var(--muted);margin-top:3px}.empty{color:var(--muted);font-style:italic}.footer{text-align:center;padding:28px 16px;color:#718096;border-top:1px solid var(--line);margin-top:40px}
+@media(max-width:760px){header{align-items:flex-start;flex-direction:column}nav{gap:2px}nav a{padding:7px 9px}.hero{grid-template-columns:1fr;padding:25px}.hero-art{display:none}.stats,.grid,.two-col{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">🏃</div><span>PJOK Edu</span></div>
+  <nav aria-label="Navigasi utama">
+    <a href="#dashboard">Dashboard</a><a href="#materi">Materi</a><a href="#diskusi">Komentar siswa</a><a href="#tugas">Pengumpulan tugas</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="dashboard">
+    <div>
+      <div class="eyebrow">Pendidikan Jasmani, Olahraga, dan Kesehatan</div>
+      <h1>Belajar Bergerak,<br>Sehat, dan Gembira!</h1>
+      <p>Selamat datang di ruang belajar PJOK. Pelajari permainan tradisional dan permainan bola besar, tonton video pembelajaran, diskusikan pertanyaan, lalu kumpulkan tugasmu.</p>
+      <a class="btn" href="#materi">Mulai belajar →</a>
+      <a class="btn secondary" href="#tugas">Kumpulkan tugas</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">⚽🏸</div>
+  </section>
+
+  <div class="stats" aria-label="Ringkasan pembelajaran">
+    <div class="stat"><div class="stat-icon">📚</div><div><strong>2</strong><small>Materi pembelajaran</small></div></div>
+    <div class="stat"><div class="stat-icon">🎬</div><div><strong>2</strong><small>Video pembelajaran</small></div></div>
+    <div class="stat"><div class="stat-icon">🤝</div><div><strong>Aktif</strong><small>Belajar dan berdiskusi</small></div></div>
+  </div>
+
+  <section id="materi">
+    <div class="section-head"><div><h2>Materi Pembelajaran</h2><p>Pilih materi sesuai topik dan tingkat kelas.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-top"><span class="tag">Materi 1 · Semua kelas</span><span class="emoji">🪁</span></div>
+        <div class="card-body">
+          <h3>Permainan Olahraga Tradisional</h3>
+          <p>Permainan tradisional merupakan aktivitas bermain yang diwariskan dari generasi ke generasi. Contohnya gobak sodor, engklek, bentengan, dan lompat tali. Permainan ini melatih kelincahan, keseimbangan, kecepatan, kerja sama, serta sportivitas.</p>
+          <p><strong>Tujuan pembelajaran:</strong> mengenal contoh permainan tradisional, memahami aturan sederhana, dan menunjukkan sikap jujur serta bekerja sama.</p>
+          <div class="note">💡 Saat bermain, lakukan pemanasan, pilih tempat yang aman, dan patuhi aturan permainan.</div>
+        </div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/1qEEfxbkMMw" title="Video pembelajaran permainan olahraga tradisional" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="card-body"><a class="btn secondary" href="https://youtu.be/1qEEfxbkMMw?si=MT6hS36PzXPMjicE" target="_blank" rel="noopener">Buka video di YouTube ↗</a></div>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="tag">Materi 2 · Kelas 4–6</span><span class="emoji">⚽</span></div>
+        <div class="card-body">
+          <h3>Permainan Bola Besar</h3>
+          <p>Permainan bola besar menggunakan bola berukuran relatif besar dan umumnya dimainkan secara beregu. Contohnya sepak bola, bola voli, dan bola basket. Gerak dasar yang dipelajari antara lain menendang, mengoper, menggiring, melempar, menangkap, dan memantulkan bola.</p>
+          <p><strong>Tujuan pembelajaran:</strong> mengenali gerak dasar permainan bola besar, memahami kerja sama tim, dan menerapkan sportivitas.</p>
+          <div class="note">💡 Perhatikan ruang bermain, gunakan perlengkapan yang sesuai, dan lakukan gerakan sesuai kemampuan.</div>
+        </div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/bjQlDj6SXGE" title="Video pembelajaran permainan bola besar untuk kelas 4 sampai 6" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="card-body"><a class="btn secondary" href="https://youtu.be/bjQlDj6SXGE?si=wQUdg6z0-LQ68i0m" target="_blank" rel="noopener">Buka video di YouTube ↗</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="diskusi">
+    <div class="section-head"><div><h2>Ruang Komentar & Tanya Jawab</h2><p>Tulis pertanyaan atau pendapat dengan bahasa yang sopan.</p></div></div>
+    <div class="two-col">
+      <form class="panel" id="commentForm">
+        <h3>💬 Kirim komentar</h3>
+        <label for="studentName">Nama siswa</label><input id="studentName" maxlength="50" required placeholder="Contoh: Aisyah">
+        <label for="studentClass">Kelas</label><select id="studentClass" required><option value="">Pilih kelas</option><option>4</option><option>5</option><option>6</option></select>
+        <label for="commentText">Pertanyaan atau komentar</label><textarea id="commentText" maxlength="500" required placeholder="Tuliskan pertanyaanmu di sini..."></textarea>
+        <button class="btn green" type="submit">Kirim komentar</button>
+        <p class="note" style="margin-top:12px">Komentar tersimpan di browser/perangkat yang sedang digunakan, bukan terkirim ke guru secara online.</p>
+      </form>
+      <div class="panel"><h3>🗨️ Komentar siswa</h3><div class="list" id="commentsList"><p class="empty">Belum ada komentar. Jadilah yang pertama bertanya!</p></div></div>
+    </div>
+  </section>
+
+  <section id="tugas">
+    <div class="section-head"><div><h2>Pengumpulan Tugas</h2><p>Isi identitas dan jawaban, lalu simpan bukti pengumpulan.</p></div></div>
+    <div class="two-col">
+      <form class="panel" id="assignmentForm">
+        <h3>📝 Formulir pengumpulan</h3>
+        <label for="taskName">Nama siswa</label><input id="taskName" maxlength="50" required placeholder="Nama lengkap">
+        <div class="form-row">
+          <div><label for="taskClass">Kelas</label><select id="taskClass" required><option value="">Pilih kelas</option><option>4</option><option>5</option><option>6</option></select></div>
+          <div><label for="taskTopic">Materi tugas</label><select id="taskTopic" required><option value="">Pilih materi</option><option>Permainan Olahraga Tradisional</option><option>Permainan Bola Besar</option></select></div>
+        </div>
+        <label for="taskAnswer">Jawaban / deskripsi tugas</label><textarea id="taskAnswer" maxlength="2000" required placeholder="Tuliskan jawaban atau tautan tugas yang sudah diunggah..."></textarea>
+        <label for="taskFile">Lampiran (opsional)</label><input id="taskFile" type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+        <button class="btn" type="submit">Simpan pengumpulan</button>
+        <p class="note" style="margin-top:12px">Versi demo ini menyimpan data dan nama file di browser saja. Untuk pengumpulan sungguhan yang dapat dilihat guru dari perangkat lain, hubungkan formulir ke Google Forms, Google Drive, atau backend sekolah.</p>
+      </form>
+      <div class="panel"><h3>📥 Riwayat pengumpulan di perangkat ini</h3><div class="list" id="tasksList"><p class="empty">Belum ada tugas yang disimpan.</p></div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">© 2026 PJOK Edu · Belajar aktif, sportif, dan sehat.</footer>
+<script>
+const $ = id => document.getElementById(id);
+const read = key => { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch { return []; } };
+const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
+function renderComments(){
+  const data=read('pjok_comments'); const root=$('commentsList');
+  root.innerHTML='';
+  if(!data.length){root.innerHTML='<p class="empty">Belum ada komentar. Jadilah yang pertama bertanya!</p>';return;}
+  data.slice().reverse().forEach(c=>{const el=document.createElement('div');el.className='item';const title=document.createElement('strong');title.textContent=c.name+' · Kelas '+c.className;const body=document.createElement('div');body.textContent=c.text;const small=document.createElement('small');small.textContent=c.date;el.append(title,body,small);root.append(el);});
+}
+function renderTasks(){
+  const data=read('pjok_tasks'); const root=$('tasksList');root.innerHTML='';
+  if(!data.length){root.innerHTML='<p class="empty">Belum ada tugas yang disimpan.</p>';return;}
+  data.slice().reverse().forEach(t=>{const el=document.createElement('div');el.className='item';const title=document.createElement('strong');title.textContent=t.name+' · Kelas '+t.className;const body=document.createElement('div');body.textContent=t.topic+': '+t.answer;const small=document.createElement('small');small.textContent='Disimpan: '+t.date+(t.file?' · Lampiran: '+t.file:'');el.append(title,body,small);root.append(el);});
+}
+$('commentForm').addEventListener('submit',e=>{
+  e.preventDefault();const data=read('pjok_comments');
+  data.push({name:$('studentName').value.trim(),className:$('studentClass').value,text:$('commentText').value.trim(),date:new Date().toLocaleString('id-ID')});
+  write('pjok_comments',data);e.target.reset();renderComments();alert('Komentar berhasil disimpan di perangkat ini.');
+});
+$('assignmentForm').addEventListener('submit',e=>{
+  e.preventDefault();const file=$('taskFile').files[0];const data=read('pjok_tasks');
+  data.push({name:$('taskName').value.trim(),className:$('taskClass').value,topic:$('taskTopic').value,answer:$('taskAnswer').value.trim(),file:file?file.name:'',date:new Date().toLocaleString('id-ID')});
+  write('pjok_tasks',data);e.target.reset();renderTasks();alert('Data tugas berhasil disimpan di perangkat ini. Pastikan lampiran dikirim melalui kanal yang ditentukan guru.');
+});
+renderComments();renderTasks();
+</script>
+</body>
+</html>
